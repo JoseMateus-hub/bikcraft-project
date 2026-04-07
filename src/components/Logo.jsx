@@ -1,9 +1,8 @@
  
  export default function Logo({ text }) {
   return (
-    <span className="text-2xl font-extrabold text-white uppercase italic">
+    <a href="/" className="text-2xl font-bold uppercase tracking-tighter text-white hover:opacity-80 transition-opacity">
       {text}<span className="text-[#ffbb00]">.</span>
-    </span>
+    </a>
   );
 }
-

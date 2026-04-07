@@ -6,7 +6,10 @@ import Footer from "./components/Footer";
 import Logo from "./components/Logo";
 import Navigator from "./components/Navigator";
 import UList from "./components/UList";
+import WhatsApp from "./components/WhatsApp";
+import About from "./components/About";
 import Anchor from "./components/Anchor";
+import Contact from "./components/Contact";
 
 export default function App() {
   return (
@@ -16,13 +19,13 @@ export default function App() {
         <Navigator>
           <UList>
             <li>
-              <Anchor text="products" href="#bikes" />
+              <Anchor text="Produtos" href="#bikes" />
             </li>
             <li>
-              <Anchor text="about" href="#about" />
+              <Anchor text="Sobre" href="#about" />
             </li>
             <li>
-              <Anchor text="contact" href="#footer" />
+              <Anchor text="Contato" href="#footer" />
             </li>
           </UList>
         </Navigator>
@@ -33,10 +36,13 @@ export default function App() {
         <div id="bikes">
           <Bikes />
         </div>
+        <About />
+        <Contact />
       </main>
 
       <div id="footer">
         <Footer />
+        <WhatsApp />
       </div>
    </div>
   )};

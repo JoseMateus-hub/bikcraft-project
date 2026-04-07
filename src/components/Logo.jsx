@@ -1,7 +1,9 @@
  
- export default function Logo({text}) {
-  return <a href="/" className="text 3x1 font-semibold">
-    {text}
-    </a>
+ export default function Logo({ text }) {
+  return (
+    <span className="text-2xl font-extrabold text-white uppercase italic">
+      {text}<span className="text-[#ffbb00]">.</span>
+    </span>
+  );
 }
 

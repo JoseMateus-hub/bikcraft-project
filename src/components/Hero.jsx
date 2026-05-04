@@ -18,9 +18,11 @@ export default function Hero() {
           Aproveite cada momento da sua jornada com estilo e conforto. 
           Nossas bicicletas elétricas combinam tecnologia e design.
         </p>
-        <button className="bg-[#ffbb00] text-black px-8 py-4 rounded-md font-bold uppercase tracking-widest hover:bg-white transition-colors">
-          Escolha a sua
-        </button>
+       <a
+  href="#bikes"
+  className="inline-block bg-[#ffbb00] hover:bg-yellow-500 text-black font-bold py-4 px-8 rounded-md uppercase tracking-widest text-sm transition-colors">
+  ESCOLHA A SUA
+       </a>
       </motion.div>
       
       {/* Lado da Imagem: Vem da direita para a esquerda */}

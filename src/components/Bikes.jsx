@@ -1,3 +1,5 @@
+import { useCartStore } from "../store/cartStore";
+
 const BIKES = [
   {
     id: 1,
@@ -26,6 +28,7 @@ const BIKES = [
 ];
 
 export default function Bikes() {
+  const addItem = useCartStore((state) => state.addItem);
   return (
     <section id="produtos" className="bg-white py-20 px-4 sm:px-20 md:px-40">
       <h2 className="text-4xl font-bold mb-2">
@@ -52,7 +55,7 @@ export default function Bikes() {
               <p className="text-2xl font-bold text-[#ffbb00] mb-5">{bike.price}</p>
 
               <button
-                onClick={() => alert(`${bike.name} adicionada ao carrinho!`)}
+                onClick={() => addItem(bike)}
                 className="mt-auto w-full bg-[#ffbb00] hover:bg-yellow-500 text-black font-bold py-3 px-6 uppercase tracking-widest text-sm transition-colors"
               >
                 Comprar

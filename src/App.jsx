@@ -10,6 +10,7 @@ import WhatsApp from "./components/WhatsApp";
 import About from "./components/About";
 import Anchor from "./components/Anchor";
 import Contact from "./components/Contact";
+import Cart from "./components/Cart";
 
 export default function App() {
   return (
@@ -44,5 +45,7 @@ export default function App() {
         <Footer />
         <WhatsApp />
       </div>
-   </div>
+      
+      <Cart />
+    </div>
   )};

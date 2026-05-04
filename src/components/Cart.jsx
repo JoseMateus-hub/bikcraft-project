@@ -1,9 +1,10 @@
 import { useCartStore } from '../store/cartStore'
 import { X, Trash2, Plus, Minus, ShoppingCart } from 'lucide-react'
+import { useNavigate } from "react-router-dom";
 
 export default function Cart() {
   const { items, isOpen, closeCart, removeItem, updateQuantity, clearCart, total } = useCartStore()
-
+  const navigate = useNavigate();
   if (!isOpen) return null
 
   return (
@@ -63,6 +64,7 @@ export default function Cart() {
                       onClick={() => updateQuantity(item.id, item.quantity + 1)}
                       className="bg-gray-800 hover:bg-gray-700 text-white w-7 h-7 flex items-center justify-center transition"
                     >
+                      
                       <Plus size={14} />
                     </button>
                     <button
@@ -87,9 +89,19 @@ export default function Cart() {
                 R$ {total().toLocaleString('pt-BR')}
               </span>
             </div>
-            <button className="w-full bg-[#ffbb00] hover:bg-yellow-500 text-black font-bold py-4 uppercase tracking-widest text-sm transition">
-              Finalizar Pedido
-            </button>
+            <button
+  onClick={() => {
+    closeCart();
+    navigate("/login", {
+  state: { from: "/checkout" },
+});
+  }}
+  className="w-full bg-[#ffbb00] hover:bg-yellow-500 text-black font-bold py-4 uppercase tracking-widest text-sm transition"
+>
+  Finalizar Pedido
+</button>
+
+
             <button
               onClick={clearCart}
               className="w-full text-gray-500 hover:text-red-400 text-sm transition"

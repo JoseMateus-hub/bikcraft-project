@@ -12,6 +12,7 @@ import Anchor from "./components/Anchor";
 import Contact from "./components/Contact";
 import Cart from "./components/Cart";
 
+
 export default function App() {
   return (
     <div className="min-h-screen bg-black flex flex-col">
